@@ -1,12 +1,8 @@
-matrix1 = [1, 2, 3]
-print(matrix1)
-new_matrix1 = list(map(lambda x: x ** 2 , matrix1))
-print(new_matrix1)
-matrix2 = [4, 5, 6]
-print(matrix2)
-new_matrix2 = list(map(lambda x: x ** 2 , matrix2))
-print(new_matrix2)
-matrix3 = [7, 8, 9]
-print(matrix3)
-new_matrix3 = list(map(lambda x: x ** 2 , matrix3))
-print(new_matrix3)
+#!/usr/bin/python3
+def square_matrix_simple(matrix=[]):
+    new_matx = matrix.copy()
+
+    for i in range(len(matrix)):
+        new_matx[i] = list(map(lambda x: x**2, matrix[i]))
+
+    return (new_matx)
