@@ -1,10 +1,10 @@
 #!/usr/bin/python3
+"""Fetches https://intranet.hbtn.io/status."""
 import requests
 
-url = 'https://alx-intranet.hbtn.io/status'
-response = requests.get(url)
-data = response.json()
 
-print("Body response:")
-print("\t- type: {}".format(type(data)))
-print("\t- content: {}".format(data['status']))
+if __name__ == "__main__":
+    r = requests.get("https://intranet.hbtn.io/status")
+    print("Body response:")
+    print("\t- type: {}".format(type(r.text)))
+    print("\t- content: {}".format(r.text))
