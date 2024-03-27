@@ -4,7 +4,7 @@ const apiUrl = process.argv[2];
 
 request(apiUrl, function (error, response, body) {
   if (error) {
-    console.error('Error:', error);
+    console.log(error);
   } else {
     const films = JSON.parse(body).results;
     let wedgeMoviesCount = 0;
